@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Cards</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff7070,#ff8c70);
+}
+
+.container{
+    width:900px;
+}
+
+.container h1{
+    color:white;
+    margin-bottom:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.card{
+    height:220px;
+    background:white;
+    border:1px solid #eee;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#ececec;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.card h3{
+    color:#555;
+    margin-bottom:5px;
+}
+
+.card p{
+    color:gray;
+    font-size:14px;
+}
+
+/* Hover Effect */
+
+.card:hover{
+    transform:translateY(-35px);
+    box-shadow:0 20px 35px rgba(0,0,0,.25);
+    z-index:10;
+}
+
+.card:hover .circle{
+    transform:scale(1.15);
+    background:linear-gradient(to bottom,#ff4d6d,#5b3cc4);
+    box-shadow:0 0 20px rgba(255,0,100,.4);
+    border:3px solid white;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Blablabla</h1>
+
+<div class="cards">
+
+<div class="card">
+<div class="circle"></div>
+<h3>Section 1</h3>
+<p>Lorem Ipsum</p>
+</div>
+
+<div class="card">
+<div class="circle"></div>
+<h3>Section 2</h3>
+<p>Lorem Ipsum</p>
+</div>
+
+<div class="card">
+<div class="circle"></div>
+<h3>Section 3</h3>
+<p>Lorem Ipsum</p>
+</div>
+
+<div class="card">
+<div class="circle"></div>
+<h3>Section 4</h3>
+<p>Lorem Ipsum</p>
+</div>
+
+<div class="card">
+<div class="circle"></div>
+<h3>Section 5</h3>
+<p>Lorem Ipsum</p>
+</div>
+
+<div class="card">
+<div class="circle"></div>
+<h3>Section 6</h3>
+<p>Lorem Ipsum</p>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
