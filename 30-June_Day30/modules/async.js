@@ -17,32 +17,32 @@
 // console.log("Login request sent...");
 
 
-function login(email, pass) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
+// function login(email, pass) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
 
-            if (
-                email === "og786755@gmail.com" &&
-                pass === "omS@0611"
-            ) {
-                resolve(" Login Successful");
-            } else {
-                reject(" Invalid Email or Password");
-            }
+//             if (
+//                 email === "og786755@gmail.com" &&
+//                 pass === "omS@0611"
+//             ) {
+//                 resolve(" Login Successful");
+//             } else {
+//                 reject(" Invalid Email or Password");
+//             }
 
-        }, 3000);
-    });
-}
+//         }, 3000);
+//     });
+// }
 
-login("og786755@gmail.com", "omS@0611")
-    .then((res) => {
-        console.log(res);
-    })
-    .catch((err) => {
-        console.log(err);
-    });
+// login("og786755@gmail.com", "omS@0611")
+//     .then((res) => {
+//         console.log(res);
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     });
 
-console.log("Login request sent...");
+// console.log("Login request sent...");
 
 // function login(email, pass) {
 //     return new Promise((resolve, reject) => {
@@ -69,3 +69,11 @@ console.log("Login request sent...");
 //     .catch((err) => {
 //         console.log(err);
 //     });
+
+
+//3.Async await
+function getUser(id){
+
+}
+
+getUser(1)
