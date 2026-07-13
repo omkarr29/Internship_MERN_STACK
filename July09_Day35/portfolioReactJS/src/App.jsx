@@ -3,33 +3,55 @@ import "./App.css";
 export default function App() {
 
     const skills = [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React.js",
-        "Java",
-        "Python",
-        "C",
-        "C++",
-        "Data Structures"
+        {
+            name: "HTML",
+            icon: "fa-brands fa-html5"
+        },
+        {
+            name: "CSS",
+            icon: "fa-brands fa-css3-alt"
+        },
+        {
+            name: "JavaScript",
+            icon: "fa-brands fa-js"
+        },
+        {
+            name: "React.js",
+            icon: "fa-brands fa-react"
+        },
+        {
+            name: "Java",
+            icon: "fa-brands fa-java"
+        },
+        {
+            name: "Python",
+            icon: "fa-brands fa-python"
+        },
+        {
+            name: "C / C++",
+            icon: "fa-solid fa-code"
+        },
+        {
+            name: "Data Structures",
+            icon: "fa-solid fa-database"
+        }
     ];
+
 
     const projects = [
         {
-            title: "Personal Portfolio",
-            desc: "A modern responsive portfolio website built using React.js, CSS animations and glassmorphism UI design."
+            title:"Portfolio Website",
+            description:"A modern responsive portfolio built using React.js and CSS."
         },
+
         {
-            title: "Netflix Clone",
-            desc: "A Netflix-inspired user interface created using React.js with reusable components and responsive design."
+            title:"Nutrition Store",
+            description:"A web based supplement store with product management."
         },
+
         {
-            title: "A OG Gym Website",
-            desc: "A startup idea that connects businesses with verified manufacturers for small batch production."
-        },
-        {
-            title: "Nutrition Store Website",
-            desc: "An online supplement store UI developed using HTML, CSS and JavaScript with product management."
+            title:"Library Management System",
+            description:"Database based system using MySQL."
         }
     ];
 
@@ -38,31 +60,33 @@ export default function App() {
 
         <div className="page">
 
-            {/* Navbar */}
 
             <nav className="nav">
 
                 <h2 className="logo">
-                    Omkar Subhash Ghodke
+                    Omkar.
                 </h2>
 
-                <div>
+
+                <div className="links">
+
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
-                    <a href="#education">Education</a>
                     <a href="#contact">Contact</a>
+
                 </div>
+
 
             </nav>
 
 
 
-            {/* Hero Section */}
+            <section className="hero">
 
-            <header className="hero">
 
-                <div>
+                <div className="hero-content">
+
 
                     <p className="intro">
                         Hello, I'm
@@ -75,36 +99,59 @@ export default function App() {
 
 
                     <h3>
-                        Diploma IT Student | MERN Stack Developer Intern
+                        Full Stack Developer
                     </h3>
 
 
-                    <p>
-                        I am a passionate Information Technology student who loves
-                        building modern web applications and solving real-world problems
-                        using technology.
+                    <p className="description">
+                        IT Diploma Student passionate about Web Development,
+                        Programming and Building real world applications.
                     </p>
 
 
+
                     <button>
-                        Hire Me
+                        Download CV
                     </button>
 
+
                     <button className="secondary">
-                        View Projects
+                        Contact Me
                     </button>
+
+
+
+                    <div className="social">
+
+
+                        <a href="https://github.com/" target="_blank">
+                            <i className="fa-brands fa-github"></i>
+                        </a>
+
+
+                        <a href="https://instagram.com/" target="_blank">
+                            <i className="fa-brands fa-instagram"></i>
+                        </a>
+
+
+                        <a href="https://linkedin.com/" target="_blank">
+                            <i className="fa-brands fa-linkedin"></i>
+                        </a>
+
+
+                    </div>
 
 
                 </div>
 
-            </header>
+
+            </section>
 
 
 
-
-            {/* About */}
 
             <section id="about">
+
 
                 <h2>
                     About Me
@@ -112,15 +159,8 @@ export default function App() {
 
 
                 <p>
-                    I am a third-year Diploma Information Technology student with
-                    strong knowledge of programming and web development.
-
-                    I have experience with C, C++, Java, Python, HTML, CSS,
-                    JavaScript and React.js.
-
-                    Currently, I am working as a MERN Stack Intern at Linkcode
-                    Technologies where I am improving my skills in frontend and
-                    backend development.
+                    I am an IT student learning frontend and backend technologies.
+                    I enjoy creating attractive websites and solving programming problems.
                 </p>
 
 
@@ -130,24 +170,31 @@ export default function App() {
 
 
 
-            {/* Skills */}
-
             <section id="skills">
 
+
                 <h2>
-                    Technical Skills
+                    Skills
                 </h2>
 
 
                 <div className="chips">
 
+
                     {
-                        skills.map(skill => (
-                            <span key={skill}>
-                                {skill}
+                        skills.map((skill,index)=>(
+
+                            <span key={index}>
+
+                                <i className={skill.icon}></i>
+
+                                {skill.name}
+
                             </span>
+
                         ))
                     }
+
 
                 </div>
 
@@ -158,17 +205,18 @@ export default function App() {
 
 
 
-            {/* Projects */}
-
 
             <section id="projects">
+
 
                 <h2>
                     Projects
                 </h2>
 
 
+
                 <div className="cards">
+
 
                     {
                         projects.map((project,index)=>(
@@ -179,13 +227,11 @@ export default function App() {
                                     {project.title}
                                 </h3>
 
+
                                 <p>
-                                    {project.desc}
+                                    {project.description}
                                 </p>
 
-                                <button>
-                                    View Project
-                                </button>
 
                             </div>
 
@@ -196,165 +242,24 @@ export default function App() {
                 </div>
 
 
-            </section>
-
-
-
-
-
-            {/* Education */}
-
-
-            <section id="education">
-
-                <h2>
-                    Education
-                </h2>
-
-
-                <div className="cards">
-
-
-                    <div className="card">
-
-                        <h3>
-                            Diploma in Information Technology
-                        </h3>
-
-                        <p>
-                            Maharashtra State Board of Technical Education
-                            (MSBTE)
-                        </p>
-
-                        <p>
-                            Currently pursuing Third Year Diploma
-                        </p>
-
-                    </div>
-
-
-
-                    <div className="card">
-
-                        <h3>
-                            Internship
-                        </h3>
-
-                        <p>
-                            MERN Stack Developer Intern
-                        </p>
-
-                        <p>
-                            Linkcode Technologies
-                        </p>
-
-                    </div>
-
-
-                </div>
-
 
             </section>
 
 
 
 
-
-
-            {/* Achievements */}
-
-
-            <section>
-
-                <h2>
-                    What I Do
-                </h2>
-
-
-                <div className="cards">
-
-
-                    <div className="card">
-
-                        <h3>
-                            Web Development
-                        </h3>
-
-                        <p>
-                            Creating responsive and user-friendly websites
-                            using modern frontend technologies.
-                        </p>
-
-                    </div>
-
-
-                    <div className="card">
-
-                        <h3>
-                            Problem Solving
-                        </h3>
-
-                        <p>
-                            Strong foundation in programming,
-                            Data Structures and logical thinking.
-                        </p>
-
-                    </div>
-
-
-
-                    <div className="card">
-
-                        <h3>
-                            Learning & Growth
-                        </h3>
-
-                        <p>
-                            Continuously exploring new technologies and
-                            improving development skills.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-
-            </section>
-
-
-
-
-
-            {/* Contact */}
 
 
             <section id="contact">
 
 
                 <h2>
-                    Contact Me
+                    Contact
                 </h2>
 
 
                 <p>
-                    Email:
-                    <br/>
-                    og7836755@gmail.com
-                </p>
-
-
-                <p>
-                    LinkedIn:
-                    <br/>
-                    linkedin.com/in/omkarg
-                </p>
-
-
-                <p>
-                    GitHub:
-                    <br/>
-                    github.com/omkarr29
+                    Email: omkar@example.com
                 </p>
 
 
@@ -363,9 +268,10 @@ export default function App() {
 
 
 
+
             <footer>
 
-                © 2026 Omkar Ghodke | MERN Stack Developer
+                © 2026 Omkar Ghodke | All Rights Reserved
 
             </footer>
 
@@ -373,5 +279,6 @@ export default function App() {
 
         </div>
 
-    );
+    )
+
 }
